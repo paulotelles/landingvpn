@@ -29,3 +29,14 @@
     @warn "Breakpoint mixin supports: xs, sm, md, lg";
   }
 }
+
+// -------------------------
+//  ROUNDED BORDERS
+//--------------------------
+
+@mixin border-radius($top-left, $top-right, $bottom-right, $bottom-left) {
+  border-top-left-radius: $top-left;
+  border-top-right-radius: $top-right;
+  border-bottom-right-radius: $bottom-right;
+  border-bottom-left-radius: $bottom-left;
+}
