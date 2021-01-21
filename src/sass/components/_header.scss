@@ -10,10 +10,9 @@
 .menu__logoicon {
   display: flex;
   align-items: center;
-}
-
-.menu__logoicon img {
-  margin-right: 10px;
+  & img {
+    margin-right: 10px;
+  }
 }
 
 .menu__mainmenu {
@@ -35,25 +34,25 @@
 }
 
 .menu__navbar {
-  & ul {
+  &-list {
     display: flex;
-    & .menu__item {
-      margin-right: 40px;
-    }
-    & .menu__item:last-child {
-      margin-right: 0;
-    }
+  }
+  &-item {
+    margin-right: 40px;
+  }
+  &-item:last-child {
+    margin-right: 0;
+  }
 
-    & a {
-      font-weight: 400;
-      color: $lightblue;
-    }
+  & a {
+    font-weight: 400;
+    color: $lightblue;
+  }
 
-    & a:hover {
-      color: $darkblue;
-      border-bottom: 1px solid $darkblue;
-      padding-bottom: 10px;
-    }
+  & a:hover {
+    color: $darkblue;
+    border-bottom: 1px solid $darkblue;
+    padding-bottom: 10px;
   }
 }
 
@@ -70,14 +69,13 @@
   padding: 13px 0;
   font-weight: 500;
   font-size: 16px;
-}
-
-.menu__buttonsignup:hover {
-  background: $lightred;
-  color: #ffffff;
-  border: 1px solid $lightred;
-  font-weight: bold;
   transition: 300ms ease all;
+  &:hover {
+    background: $lightred;
+    color: #ffffff;
+    border: 1px solid $lightred;
+    font-weight: bold;
+  }
 }
 
 .menu__buttonsignin {
@@ -87,17 +85,18 @@
   border: none;
   font-weight: 500;
   font-size: 16px;
-}
-
-.menu__buttonsignin:hover {
-  font-weight: bold;
   transition: 300ms ease all;
+  &:hover {
+    font-weight: bold;
+  }
 }
 
 @include breakpoint(mobile) {
   .menu {
     position: relative;
-    margin: 20px auto;
+    margin: 0 auto;
+    padding: 20px 0;
+    border-bottom: 1px solid #e6e6e6;
     width: 100%;
   }
 
@@ -111,10 +110,12 @@
   }
 
   .menu__tooglepart {
+    position: relative;
     display: block;
     height: 5px;
     width: 35px;
-    background-color: $lightred;
+    background-color: $red;
+    transition: 350ms ease all;
     &:nth-child(1) {
       margin-bottom: 4px;
     }
@@ -123,9 +124,31 @@
     }
   }
 
+  .menu__toogle.active {
+    position: relative;
+    & .menu__tooglepart {
+      &:nth-child(1) {
+        margin-bottom: 0;
+        top: 5px;
+        transform: rotate(45deg);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:nth-child(3) {
+        margin-top: 0;
+        bottom: 5px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
   .menu__mainmenu {
+    border-left: 1px solid;
+    border-color: #e6e6e6;
+    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.15);
     padding-left: 0;
-    position: absolute;
+    position: fixed;
     flex-direction: column;
     top: 77px;
     height: calc(100vh - 77px);
@@ -134,25 +157,24 @@
     pointer-events: none;
     opacity: 0;
     transform: translateX(100%);
-    transition: transform 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
     &.menuactive {
       transform: translateX(0);
       opacity: 1;
       pointer-events: all;
-      background: yellow;
     }
   }
 
   .menu__navbar {
     margin-bottom: 63px;
-    & ul {
+    &-list {
       flex-direction: column;
       height: 275px;
       align-items: center;
       justify-content: space-between;
-      & .menu__item {
-        margin-right: 0;
-      }
+    }
+    &-item {
+      margin-right: 0;
     }
   }
 
