@@ -3,8 +3,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 50px auto;
+  margin: 0 auto;
+  padding: 50px 0;
   width: 90%;
+}
+
+.overlay {
+  display: none;
 }
 
 .menu__logoicon {
@@ -121,9 +126,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 34px 10px;
+    padding: 34px 5%;
     position: fixed;
-    top: 0;
     z-index: 100;
     background-color: white;
   }
@@ -211,7 +215,8 @@
 @include breakpoint(tablet) {
   .menu {
     flex-direction: column;
-    margin: 30px auto;
+    margin: 0px auto;
+    padding: 20px 0;
   }
 
   .menu__mainmenu {

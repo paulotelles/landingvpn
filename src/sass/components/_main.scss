@@ -1,5 +1,17 @@
 .maincontent {
   max-width: 1140px;
   width: 90%;
-  margin: 0 auto;
+  margin: 48px auto;
+}
+
+@include breakpoint(mobile) {
+  .maincontent {
+    margin: 0 auto;
+  }
+}
+
+@include breakpoint(tablet) {
+  .maincontent {
+    margin: 24px auto;
+  }
 }
