@@ -1,0 +1,30 @@
+.container {
+  max-width: 1140px;
+  display: flex;
+  &-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 2%;
+  }
+  &-img {
+    max-width: 50%;
+  }
+}
+
+@include breakpoint(tablet-max) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    &-header {
+      align-items: center;
+      row-gap: 38px;
+    }
+    &-img {
+      max-width: 100%;
+    }
+    & img {
+      width: 100%;
+    }
+  }
+}
