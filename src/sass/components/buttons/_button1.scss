@@ -12,8 +12,6 @@
   transform: scale(1);
   transition: 300ms ease all;
   box-shadow: -1px 11px 20px 7px rgba(246, 56, 56, 0.3);
-  margin-bottom: 25px;
-  margin-top: 30px;
   &:hover {
     color: $red;
     background-color: white;
@@ -36,6 +34,5 @@
   .button1 {
     height: 48px;
     width: 201px;
-    margin-top: 0;
   }
 }

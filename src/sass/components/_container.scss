@@ -2,11 +2,7 @@
   max-width: 1140px;
   display: flex;
   &-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     width: 50%;
-    row-gap: 20px;
   }
 
   & img {
