@@ -27,3 +27,26 @@ toggleMenuButton.addEventListener("click", () => {
   menuIconToggle.classList.add("active");
   return menuToggle.classList.add("menuactive");
 });
+
+/*INICIALIZAÇÃO DO SWIPER*/
+
+var swiperDataValues = new Swiper(".swiper-DataValues", {
+  slidesPerView: 1,
+  initialSlide: 1,
+  // Optional parameters
+  direction: "horizontal",
+  loop: false,
+
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+
+  breakpoints: {
+    640: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+  },
+});
