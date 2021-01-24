@@ -3,6 +3,11 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 30px;
+  &-big {
+    font-size: 20px;
+    color: $lightblue;
+    font-weight: 400;
+  }
   &-highlight {
     font-weight: 500;
   }
@@ -16,7 +21,7 @@
 
 @include breakpoint(tablet-max) {
   .turnhighlight {
-    color: #000000;
+    color: $black;
   }
 
   .turncentered {
