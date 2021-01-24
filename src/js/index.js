@@ -31,7 +31,6 @@ toggleMenuButton.addEventListener("click", () => {
 /*INICIALIZAÇÃO DO SWIPER*/
 
 var swiperDataValues = new Swiper(".swiper-DataValues", {
-  slidesPerView: 1,
   initialSlide: 1,
   // Optional parameters
   direction: "horizontal",

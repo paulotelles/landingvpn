@@ -11,12 +11,12 @@
   }
   &-box {
     height: 200px;
-    border: 1px solid #eeeeee;
+    border: 1px solid $gray;
     @include border-radius(10px, 10px, 10px, 10px);
     box-shadow: 0px 50px 30px 0px rgba(13, 16, 37, 0.08);
   }
   &-slide {
-    border-left: 2px solid #eeeff2;
+    border-left: 2px solid $gray;
   }
   &-slide:first-child {
     border-left: none;
@@ -44,6 +44,9 @@
     }
     &-imgcontainer {
       margin-right: 26px;
+    }
+    &-slide {
+      border-left: none;
     }
   }
 }
