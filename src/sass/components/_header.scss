@@ -3,8 +3,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 50px auto;
+  margin: 0 auto;
+  padding: 50px 0;
   width: 90%;
+}
+
+.overlay {
+  display: none;
 }
 
 .menu__logoicon {
@@ -95,9 +100,25 @@
   .menu {
     position: relative;
     margin: 0 auto;
-    padding: 20px 0;
+    height: 105px;
     border-bottom: 1px solid #e6e6e6;
     width: 100%;
+  }
+
+  .overlay {
+    &-active {
+      position: fixed; /* Sit on top of the page content */
+      display: block; /* Hidden by default */
+      width: 100%; /* Full width (cover the whole page) */
+      height: 100%; /* Full height (cover the whole page) */
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+      z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+      transition: 0.3s ease all;
+    }
   }
 
   .menu__logoarea {
@@ -105,11 +126,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 34px 5%;
+    position: fixed;
+    z-index: 100;
+    background-color: white;
   }
 
-  .menu__tooglepart {
+  .menu__togglepart {
     position: relative;
     display: block;
     height: 5px;
@@ -124,9 +147,9 @@
     }
   }
 
-  .menu__toogle.active {
+  .menu__toggle.active {
     position: relative;
-    & .menu__tooglepart {
+    & .menu__togglepart {
       &:nth-child(1) {
         margin-bottom: 0;
         top: 5px;
@@ -146,12 +169,14 @@
   .menu__mainmenu {
     border-left: 1px solid;
     border-color: #e6e6e6;
+    background-color: white;
     box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.15);
     padding-left: 0;
     position: fixed;
+    z-index: 100;
     flex-direction: column;
-    top: 77px;
-    height: calc(100vh - 77px);
+    top: 105px;
+    height: calc(100vh - 105px);
     right: 0;
     justify-content: center;
     pointer-events: none;
@@ -190,7 +215,8 @@
 @include breakpoint(tablet) {
   .menu {
     flex-direction: column;
-    margin: 30px auto;
+    margin: 0px auto;
+    padding: 20px 0;
   }
 
   .menu__mainmenu {

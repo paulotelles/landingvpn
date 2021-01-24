@@ -1,0 +1,25 @@
+.textcontent {
+  color: $lightblue;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  &-highlight {
+    font-weight: 500;
+  }
+  &-itemlist {
+    padding-left: 20px;
+  }
+  &-itemlist::before {
+    content: url("../../img/checked.png");
+  }
+}
+
+@include breakpoint(tablet-max) {
+  .turnhighlight {
+    color: #000000;
+  }
+
+  .turncentered {
+    text-align: center;
+  }
+}

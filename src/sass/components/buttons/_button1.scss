@@ -1,0 +1,38 @@
+.button1 {
+  background-color: $red;
+  color: white;
+  line-height: 25px;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 7.5px;
+  width: 250px;
+  height: 60px;
+  border: 1px solid $red;
+  @include border-radius(10px, 10px, 10px, 10px);
+  transform: scale(1);
+  transition: 300ms ease all;
+  box-shadow: -1px 11px 20px 7px rgba(246, 56, 56, 0.3);
+  &:hover {
+    color: $red;
+    background-color: white;
+    transform: scale(1.2);
+  }
+}
+
+.button__container {
+  padding-bottom: 25px;
+  width: fit-content;
+  @include border-radius(10px, 10px, 0, 0);
+  background-image: linear-gradient(
+    rgba(245, 56, 56, 1),
+    rgba(245, 56, 56, 0.35),
+    rgba(255, 255, 255, 1)
+  );
+}
+
+@include breakpoint(mobile) {
+  .button1 {
+    height: 48px;
+    width: 201px;
+  }
+}

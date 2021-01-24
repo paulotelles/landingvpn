@@ -1,26 +1,29 @@
-console.log("teste");
-
 /*criação de váriavel para observar a mudança de media queries*/
 let mql = window.matchMedia("(max-width: 639px)");
 
-let toogleMenuButton = document.querySelector(".menu__toogle");
-let menuToogle = document.querySelector(".menu__mainmenu");
-let menuIconToogle = document.querySelector(".menu__toogle");
+/*definição de variaveis para o listener de @media e o de clique no menu*/
+let toggleMenuButton = document.querySelector(".menu__toggle");
+let menuToggle = document.querySelector(".menu__mainmenu");
+let menuIconToggle = document.querySelector(".menu__toggle");
+let overlayDiv = document.querySelector(".overlay");
 
 /*adicionei um listener para identificar a mudança de @media e esconder o menu.*/
 mql.addEventListener("change", () => {
-  if (menuToogle.classList.contains("menuactive")) {
-    menuIconToogle.classList.remove("active");
-    return menuToogle.classList.remove("menuactive");
+  if (menuToggle.classList.contains("menuactive")) {
+    menuIconToggle.classList.remove("active");
+    return menuToggle.classList.remove("menuactive");
   }
 });
 
-toogleMenuButton.addEventListener("click", () => {
-  if (menuToogle.classList.contains("menuactive")) {
-    menuIconToogle.classList.remove("active");
-    return menuToogle.classList.remove("menuactive");
+/*adicionei um listener para capturar o evento de clique do menu para mobile*/
+toggleMenuButton.addEventListener("click", () => {
+  if (menuToggle.classList.contains("menuactive")) {
+    overlayDiv.className = "overlay";
+    menuIconToggle.classList.remove("active");
+    return menuToggle.classList.remove("menuactive");
   }
 
-  menuIconToogle.classList.add("active");
-  return menuToogle.classList.add("menuactive");
+  overlayDiv.className = "overlay-active";
+  menuIconToggle.classList.add("active");
+  return menuToggle.classList.add("menuactive");
 });
