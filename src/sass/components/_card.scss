@@ -1,0 +1,51 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px;
+  padding-bottom: 50px;
+  border: 2px solid #dddddd;
+  @include border-radius(10px, 10px, 10px, 10px);
+  align-items: center;
+  &:hover {
+    border-color: $red;
+  }
+  & img {
+    width: auto;
+  }
+  &-imgcontainer {
+    margin-bottom: 30px;
+  }
+  &-main {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  &-list {
+    height: 230px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  &-itemlist {
+    font-size: 14px;
+    margin-left: 44px;
+    margin-bottom: 5px;
+  }
+  &-itemlist::before {
+    position: absolute;
+    left: 0;
+    content: url("../../src/img/checked2.png");
+    padding-top: 3px;
+  }
+}
+
+@include breakpoint(tablet-max) {
+  .card {
+    padding: 45px 0;
+  }
+
+  .swiper-card {
+    & .swiper-pagination {
+      position: static;
+      margin-top: 20px;
+    }
+  }
+}

@@ -3,6 +3,13 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 30px;
+  &-extrabig {
+    font-size: 25px;
+    color: $lightblue;
+    line-height: 30px;
+    font-weight: 400;
+    text-align: center;
+  }
   &-big {
     font-size: 20px;
     color: $lightblue;
@@ -11,11 +18,18 @@
   &-highlight {
     font-weight: 500;
   }
+  &-list {
+    position: relative;
+  }
   &-itemlist {
-    padding-left: 20px;
+    margin-left: 30px;
+    margin-bottom: 5px;
   }
   &-itemlist::before {
-    content: url("../../img/checked.png");
+    position: absolute;
+    left: 0;
+    content: url("../../src/img/checked.png");
+    padding-top: 3px;
   }
 }
 

@@ -26,9 +26,10 @@
     color: $red;
     font-weight: 700;
   }
-  & .centeralign {
-    text-align: center;
-  }
+}
+
+.centeralign {
+  text-align: center;
 }
 
 @include breakpoint(tablet-max) {
