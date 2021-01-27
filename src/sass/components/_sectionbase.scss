@@ -1,11 +1,11 @@
 .sectionbase {
   justify-content: space-between;
   align-items: flex-end;
-  & .container-header {
+  .container-header {
     width: 40%;
   }
-  & .container-img {
-    width: 40%;
+  .container-img {
+    width: 45%;
   }
   &-spacetitle {
     margin-top: 50px;
@@ -18,11 +18,11 @@
 
 @include breakpoint(tablet-max) {
   .sectionbase {
-    & .container-header {
+    .container-header {
       width: 100%;
       order: 1;
     }
-    & .container-img {
+    .container-img {
       width: 100%;
       order: 2;
     }

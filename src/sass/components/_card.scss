@@ -9,7 +9,7 @@
   &:hover {
     border-color: $red;
   }
-  & img {
+  img {
     width: auto;
   }
   &-imgcontainer {
@@ -27,7 +27,7 @@
   &-itemlist {
     font-size: 14px;
     margin-left: 44px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
   &-itemlist::before {
     position: absolute;
@@ -43,7 +43,7 @@
   }
 
   .swiper-card {
-    & .swiper-pagination {
+    .swiper-pagination {
       position: static;
       margin-top: 20px;
     }

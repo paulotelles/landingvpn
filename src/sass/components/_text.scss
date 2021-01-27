@@ -15,6 +15,12 @@
     color: $lightblue;
     font-weight: 400;
   }
+  &-small {
+    color: $lightblue;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 30px;
+  }
   &-highlight {
     font-weight: 500;
   }
@@ -23,7 +29,7 @@
   }
   &-itemlist {
     margin-left: 30px;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
   }
   &-itemlist::before {
     position: absolute;
