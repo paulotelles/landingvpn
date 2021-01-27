@@ -1,0 +1,15 @@
+.plans {
+  .container-header .textcontent {
+    margin-top: 20px;
+    margin-bottom: 60px;
+  }
+}
+
+@include breakpoint(mobile) {
+  .plans {
+    .container-header .textcontent {
+      margin-top: 24px;
+      margin-bottom: 32px;
+    }
+  }
+}

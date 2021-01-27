@@ -1,19 +1,37 @@
 .container {
   max-width: 1140px;
   display: flex;
+  margin: 0 auto;
+  width: 90%;
   &-header {
     width: 50%;
   }
-
-  & img {
+  img {
     width: 100%;
+  }
+  &-fullbackground {
+    margin: 94px auto;
+    background: linear-gradient(#f8f8f8, $white);
+    padding-top: 84px;
+  }
+  &-card {
+    display: block;
   }
 }
 
 .containerSwiper {
   max-width: 1140px;
   padding: 38px 0;
-  margin: 120px auto 0;
+  margin: 120px auto 92px;
+  width: 90%;
+}
+
+.container__mod02 {
+  flex-direction: column;
+  align-items: center;
+  &-main {
+    width: 100%;
+  }
 }
 
 @include breakpoint(tablet-max) {
@@ -31,7 +49,10 @@
     &Swiper {
       height: 178px;
       padding: 42px 0;
-      margin-top: 94px;
+      margin: 94px auto 72px;
+    }
+    &-fullbackground {
+      padding-top: 45px;
     }
   }
 }

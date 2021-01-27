@@ -49,3 +49,23 @@ var swiperDataValues = new Swiper(".swiper-DataValues", {
     },
   },
 });
+
+var swiperCard = new Swiper(".swiper-card", {
+  initialSlide: 1,
+  // Optional parameters
+  direction: "horizontal",
+  loop: false,
+
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+
+  breakpoints: {
+    960: {
+      slidesPerView: 3,
+      spaceBetween: 50,
+    },
+  },
+});

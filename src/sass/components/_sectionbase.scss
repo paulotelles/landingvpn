@@ -1,0 +1,37 @@
+.sectionbase {
+  justify-content: space-between;
+  align-items: flex-end;
+  .container-header {
+    width: 40%;
+  }
+  .container-img {
+    width: 45%;
+  }
+  &-spacetitle {
+    margin-top: 50px;
+  }
+  &-spacetext {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+}
+
+@include breakpoint(tablet-max) {
+  .sectionbase {
+    .container-header {
+      width: 100%;
+      order: 1;
+    }
+    .container-img {
+      width: 100%;
+      order: 2;
+    }
+    &-spacetitle {
+      margin-top: 0;
+    }
+    &-spacetext {
+      margin-top: 26px;
+      margin-bottom: 22px;
+    }
+  }
+}

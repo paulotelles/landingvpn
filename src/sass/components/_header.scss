@@ -15,7 +15,7 @@
 .menu__logoicon {
   display: flex;
   align-items: center;
-  & img {
+  img {
     margin-right: 10px;
   }
 }
@@ -32,7 +32,7 @@
   color: $darkblue;
   font-size: 20px;
   font-weight: 500;
-  & span {
+  span {
     font-weight: bold;
     text-transform: uppercase;
   }
@@ -49,12 +49,12 @@
     margin-right: 0;
   }
 
-  & a {
+  a {
     font-weight: 400;
     color: $lightblue;
   }
 
-  & a:hover {
+  a:hover {
     color: $darkblue;
     border-bottom: 1px solid $darkblue;
     padding-bottom: 10px;
@@ -149,7 +149,7 @@
 
   .menu__toggle.active {
     position: relative;
-    & .menu__togglepart {
+    .menu__togglepart {
       &:nth-child(1) {
         margin-bottom: 0;
         top: 5px;
