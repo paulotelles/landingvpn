@@ -3,6 +3,10 @@
     margin-top: 20px;
     margin-bottom: 60px;
   }
+
+  .swiper-pagination {
+    display: none;
+  }
 }
 
 @include breakpoint(mobile) {
@@ -10,6 +14,9 @@
     .container-header .textcontent {
       margin-top: 24px;
       margin-bottom: 32px;
+    }
+    .swiper-pagination {
+      display: inline-block;
     }
   }
 }
