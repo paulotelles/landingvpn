@@ -69,3 +69,30 @@ var swiperCard = new Swiper(".swiper-card", {
     },
   },
 });
+
+var swiperCard = new Swiper(".swiper-card2", {
+  initialSlide: 1,
+  spaceBetween: 31,
+  // Optional parameters
+  direction: "horizontal",
+  loop: false,
+
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+
+  navigation: {
+    nextEl: ".button-forward",
+    prevEl: ".button-backward",
+  },
+
+  breakpoints: {
+    640: {
+      slidesPerView: "auto",
+      centeredSlides: true,
+      initialSlide: 1,
+    },
+  },
+});

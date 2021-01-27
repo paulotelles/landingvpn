@@ -17,6 +17,12 @@
   &-card {
     display: block;
   }
+  .sponsored {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
 }
 
 .containerSwiper {
@@ -53,6 +59,15 @@
     }
     &-fullbackground {
       padding-top: 45px;
+    }
+
+    .sponsored {
+      flex-direction: column;
+      justify-content: space-between;
+      height: 605px;
+      img {
+        width: 50%;
+      }
     }
   }
 }

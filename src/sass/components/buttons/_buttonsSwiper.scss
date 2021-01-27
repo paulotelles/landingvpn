@@ -1,0 +1,21 @@
+.button-backward,
+.button-forward {
+  width: 60px;
+  height: 60px;
+  border: 2px solid $red;
+  @include border-radius(50%, 50%, 50%, 50%);
+  padding-top: 5px;
+  .button-img {
+    width: 20px;
+    height: 17.5px;
+  }
+}
+
+.button-backward {
+  background-color: $white;
+  margin-right: 20px;
+}
+
+.button-forward {
+  background-color: $red;
+}

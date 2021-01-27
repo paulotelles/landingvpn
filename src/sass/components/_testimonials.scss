@@ -1,0 +1,26 @@
+.testimonials {
+  margin-top: 94px;
+  margin-bottom: 65px;
+  .textcontent.centeralign {
+    margin-top: 20px;
+    margin-bottom: 60px;
+  }
+
+  &-buttons {
+    display: inline-block;
+  }
+
+  &-swipercontrol {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    align-items: center;
+  }
+}
+
+@include breakpoint(tablet-max) {
+  .textcontent.centeralign {
+    margin-top: 22px;
+    margin-bottom: 41px;
+  }
+}
