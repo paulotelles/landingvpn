@@ -9,6 +9,9 @@
     width: 20px;
     height: 17.5px;
   }
+  &:hover {
+    box-shadow: 0px 44px 14px 0px rgba(13, 16, 37, 0.08);
+  }
 }
 
 .button-backward {
