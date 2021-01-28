@@ -4,7 +4,7 @@
   padding: 30px;
   border: 2px solid #dddddd;
   @include border-radius(10px, 10px, 10px, 10px);
-  height: 269px;
+  min-height: 269px;
   width: 359px;
   &-header {
     display: flex;
@@ -13,7 +13,7 @@
     justify-content: space-between;
   }
   &-main {
-    height: 148px;
+    /*height: 148px;*/
   }
   &-title {
     display: flex;
@@ -47,7 +47,7 @@
 
 @include breakpoint(mobile) {
   .card2 {
-    padding: 6%;
+    padding: 30px;
     width: 100%;
   }
 }
