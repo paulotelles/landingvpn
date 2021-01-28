@@ -1,0 +1,42 @@
+.swiper__box {
+  height: 200px;
+  border: 1px solid $gray;
+  @include border-radius(10px, 10px, 10px, 10px);
+  box-shadow: 0px 50px 30px 0px rgba(13, 16, 37, 0.08);
+  &-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 125px;
+  }
+  &-imgcontainer {
+    margin-right: 36px;
+  }
+  &-border {
+    border-right: 2px solid $gray;
+  }
+
+  /*remove a paginação do swiper*/
+  .swiper-pagination {
+    display: none;
+  }
+}
+
+@include breakpoint(mobile) {
+  .swiper__box {
+    &-container {
+      height: auto;
+    }
+    &-imgcontainer {
+      margin-right: 26px;
+    }
+    &-border {
+      border-right: none;
+    }
+    /*colocando a paginação do swiper apenas no mobile*/
+    .swiper-pagination {
+      display: inline-block;
+      margin-top: 20px;
+    }
+  }
+}

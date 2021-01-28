@@ -1,0 +1,31 @@
+/* ESTE ARQUIVO É EXCLUISAVEMENTE PARA ALTERAR CONFIGURAÇÕES GLOBAIS DO SWIPER */
+
+.swiper {
+  &-container {
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: inline-block;
+      position: relative;
+    }
+  }
+
+  &-pagination-bullet-active {
+    width: 27px;
+    @include border-radius(3px, 3px, 3px, 3px);
+    background-color: $red;
+  }
+
+  &-container .swiper-slide {
+    width: auto;
+  }
+
+  &-pagination-bullet {
+    margin-right: 10px;
+  }
+
+  &-pagination {
+    width: auto;
+    position: static;
+    display: inline-block;
+  }
+}

@@ -37,6 +37,9 @@
     content: url("../../src/img/checked.png");
     padding-top: 3px;
   }
+  &.darktext {
+    color: $darkblue;
+  }
 }
 
 @include breakpoint(tablet-max) {
