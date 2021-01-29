@@ -16,6 +16,12 @@
     margin-top: 12px;
     align-items: center;
   }
+
+  .swiper-slide-active {
+    .card2 {
+      border-color: $red;
+    }
+  }
 }
 
 @include breakpoint(tablet-max) {
