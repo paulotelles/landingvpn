@@ -84,11 +84,16 @@
   }
 
   .subscribe {
-    padding: 46px 13px;
+    padding: 46px 31px;
     flex-direction: column;
+    .button1 {
+      width: 250px;
+      height: 60px;
+    }
     .title {
       text-align: center;
       font-size: 26px;
+      line-height: 38px;
     }
     .textcontent {
       margin-top: 29px;
